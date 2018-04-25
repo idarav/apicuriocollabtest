@@ -1,0 +1,54 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "TestAPI",
+    "description": "This is a test API, only for demonstration of the generator.",
+    "termsOfService": "",
+    "version": "v1"
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/square/{number}": {
+      "get": {
+        "description": "Square a number.",
+        "parameters": [
+          {
+            "name": "number",
+            "in": "path",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/NumberValue"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "NumberValue": {
+      "type": "object",
+      "properties": {
+        "squared": {
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {}
+}
