@@ -38,6 +38,35 @@
           }
         }
       }
+    },
+    "/add/{a}/{b}": {
+      "get": {
+        "description": "Add two numbers.",
+        "responses": {
+          "200": {
+            "description": "The result of addition.",
+            "schema": {
+              "$ref": "#/definitions/NumberValue"
+            }
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "a",
+          "in": "path",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        },
+        {
+          "name": "b",
+          "in": "path",
+          "required": true,
+          "type": "integer",
+          "format": "int32"
+        }
+      ]
     }
   },
   "definitions": {
