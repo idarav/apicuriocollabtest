@@ -77,6 +77,21 @@
           "type": "integer"
         }
       }
+    },
+    "NumberPair": {
+      "title": "Root Type for NumberPair",
+      "description": "The root of the NumberPair type's schema.",
+      "type": "object",
+      "properties": {
+        "a": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "b": {
+          "format": "int32",
+          "type": "integer"
+        }
+      }
     }
   },
   "securityDefinitions": {}
